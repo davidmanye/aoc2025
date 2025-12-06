@@ -1,0 +1,12 @@
+root = true
+
+# For all files, keep standard rules
+[*]
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Override rules SPECIFICALLY for input files
+[src/main/resources/**/*.txt]
+trim_trailing_whitespace = false
+insert_final_newline = false

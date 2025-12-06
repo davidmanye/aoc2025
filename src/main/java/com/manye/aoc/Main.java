@@ -8,7 +8,7 @@ public class Main {
 
   public static void main(String[] args) {
     // SET THIS TO 0 TO AUTOMATICALLY RUN THE LATEST IMPLEMENTED DAY
-    int dayToRun = 5;
+    int dayToRun = 0;
 
     try {
       // 1. RESOLVE THE DAY
