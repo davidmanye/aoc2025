@@ -1,5 +1,6 @@
 package com.manye.aoc.model;
 
+import com.manye.aoc.GridUtils;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -9,6 +10,7 @@ import java.util.Set;
 public class TachyonManifold {
 
   public static final char SPLITTER = '^';
+  public static final char WAY = '|';
   private final char[][] grid;
   private final int height;
   private final int width;
@@ -77,12 +79,14 @@ public class TachyonManifold {
         Point left = new Point(next.x() - 1, next.y());
         if (isInBounds(left) && visited.add(left)) {
           queue.add(left);
+          grid[left.y()][left.x()] = WAY;
         }
 
         // Spawn RIGHT beam (at the same row as the splitter)
         Point right = new Point(next.x() + 1, next.y());
         if (isInBounds(right) && visited.add(right)) {
           queue.add(right);
+          grid[right.y()][right.x()] = WAY;
         }
 
       } else {
@@ -90,6 +94,7 @@ public class TachyonManifold {
         // Beam continues downward
         if (visited.add(next)) {
           queue.add(next);
+          grid[next.y()][next.x()] = WAY;
         }
       }
     }
@@ -149,5 +154,13 @@ public class TachyonManifold {
   private boolean isInBounds(Point p) {
     return p.x() >= 0 && p.x() < width &&
         p.y() >= 0 && p.y() < height;
+  }
+
+  public void printGrid() {
+    GridUtils.printGridPretty(grid);
+  }
+
+  public void printMemo() {
+    GridUtils.printGridPretty(memo);
   }
 }
