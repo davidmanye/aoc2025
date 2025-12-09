@@ -1,4 +1,4 @@
-package com.manye.aoc.days;
+package com.manye.aoc.y2025.days;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -6,24 +6,24 @@ import com.manye.aoc.Day;
 import com.manye.aoc.InputReader;
 import org.junit.jupiter.api.Test;
 
-class Day07Test {
+class Day02Test {
 
-  private final Day day = new Day07();
+  private final Day day = new Day02();
 
   @Test
   void part1() {
-    var expected = "21";
+    var expected = "1227775554";
 
-    var actual = day.part1(InputReader.readInput("/test/inputs/day07.txt"));
+    var actual = day.part1(InputReader.readInput("/test/inputs/day02.txt"));
 
     assertThat(actual).isEqualTo(expected);
   }
 
   @Test
   void part2() {
-    var expected = "40";
+    var expected = "6";
 
-    var actual = day.part2(InputReader.readInput("/test/inputs/day07.txt"));
+    var actual = day.part2(InputReader.readInput("/test/inputs/day02.txt"));
 
     assertThat(actual).isEqualTo(expected);
   }

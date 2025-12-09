@@ -1,4 +1,4 @@
-package com.manye.aoc.model;
+package com.manye.aoc.y2025.model;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -1,4 +1,4 @@
-package com.manye.aoc.days;
+package com.manye.aoc.y2025.days;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
